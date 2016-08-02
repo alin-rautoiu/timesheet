@@ -5,10 +5,9 @@ using System.Web;
 
 namespace NHibernateTest.Data.Vo
 {
-    public class BaseVo<TIdentifier>
-        where TIdentifier : new()
+    public class Project : BaseVo<int>
     {
-        public virtual TIdentifier Id { get; set; }
+        public virtual string Name { get; set; }
 
     }
 }
