@@ -95,6 +95,10 @@
       <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NHibernate.Mapping.Attributes, Version=4.0.0.1, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Mapping.Attributes.4.0.0.1\lib\net40\NHibernate.Mapping.Attributes.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -201,7 +205,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <EmbeddedResource Include="Data\Vo\Dog.hbm.xml" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -263,9 +266,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Data\Dao\BaseDao.cs" />
-    <Compile Include="Data\Dao\DogDao.cs" />
+    <Compile Include="Data\Dao\ProjectDao.cs" />
+    <Compile Include="Data\Dao\DaysheetDao.cs" />
+    <Compile Include="Data\Dao\TaskDao.cs" />
+    <Compile Include="Data\Dao\TimesheetDao.cs" />
     <Compile Include="Data\Vo\BaseVo.cs" />
-    <Compile Include="Data\Vo\Dog.cs" />
+    <Compile Include="Data\Vo\Daysheet.cs" />
+    <Compile Include="Data\Vo\Project.cs" />
+    <Compile Include="Data\Vo\Task.cs" />
+    <Compile Include="Data\Vo\Timesheet.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

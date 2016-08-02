@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Context;
+using NHibernate.Mapping.Attributes;
 
 namespace NHibernateTest.Nhibernate
 {
@@ -25,7 +28,12 @@ namespace NHibernateTest.Nhibernate
             {
                 if (_sessionFactory == null)
                 {
-                    Configuration configuration = new Configuration();
+                    var configuration = new Configuration();
+                    HbmSerializer.Default.Validate = true;
+                    using (var stream = HbmSerializer.Default.Serialize(Assembly.GetExecutingAssembly()))
+                    {
+                        configuration.AddInputStream(stream);
+                    }
                     configuration.Configure();
 
                     // build a Session Factory
