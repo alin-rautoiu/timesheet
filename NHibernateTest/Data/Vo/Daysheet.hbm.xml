@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="NHibernateTest.Data.Vo"
+                   assembly="NHibernateTest">
+  <class name="DaySheet" table="Dbo.DaySheet">
+    <id name="Id" column="Id">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Data" column="Data"/>
+    <property name="WorkedHour" column="WorkedHour"/>
+    <many-to-one name="TaskNameId" 
+    column="TaskNameId" not-null="false"
+/>
+    <many-to-one name="TimeSheetId"
+   column="TimeSheetId" not-null="false"
+/>
+  </class>
+</hibernate-mapping>

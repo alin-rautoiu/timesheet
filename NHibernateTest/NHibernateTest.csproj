@@ -202,6 +202,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <EmbeddedResource Include="Data\Vo\Dog.hbm.xml" />
+    <Content Include="Data\Vo\Project.hbm.xml" />
+    <Content Include="Data\Vo\Daysheet.hbm.xml" />
+    <Content Include="Data\Vo\Task.hbm.xml" />
+    <Content Include="Data\Vo\TimeSheet.hbm.xml" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -265,7 +269,11 @@
     <Compile Include="Data\Dao\BaseDao.cs" />
     <Compile Include="Data\Dao\DogDao.cs" />
     <Compile Include="Data\Vo\BaseVo.cs" />
+    <Compile Include="Data\Vo\DaySheet.cs" />
     <Compile Include="Data\Vo\Dog.cs" />
+    <Compile Include="Data\Vo\Project.cs" />
+    <Compile Include="Data\Vo\Task.cs" />
+    <Compile Include="Data\Vo\TimeSheet.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
