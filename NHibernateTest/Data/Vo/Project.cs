@@ -11,7 +11,7 @@ namespace NHibernateTest.Data.Vo
     public class Project : BaseVo<int>
     {
         [Property]
-        public virtual string Nume { get; set; }
+        public virtual string Name { get; set; }
 
         [Set (0, Name = "Tasks", Inverse = true)]
         [Key(1, Column = "ProjectId", ForeignKey = "FK_Task_Project")]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using NHibernate.Mapping.Attributes;
+using NHibernateTest.Data.Vo;
 
 namespace NHibernateTest.Data.Vo
 {
@@ -15,9 +16,8 @@ namespace NHibernateTest.Data.Vo
         [Property]
         public virtual int WorkedHour { get; set; }
         [Property]
-        public virtual int TimesheetId { get; set; }
-        [Property]
-        [ManyToOne(Column = "TimesheetId")]
+        [ManyToOne(Column = "TimesheetId" ,ForeignKey ="FK_Daysheet_Timesheet")]
         public virtual Timesheet Timesheet { get; set; }
+        
     }
 }

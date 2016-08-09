@@ -7,6 +7,10 @@ using log4net.Config;
 using NHibernateTest.Data.Dao;
 using NHibernateTest.Data.Vo;
 using NHibernateTest.Nhibernate;
+using NHibernate.Transform;
+using System.Web.Providers.Entities;
+using NHibernate;
+using static System.Collections.Specialized.BitVector32;
 
 namespace NHibernateTest
 {
@@ -14,17 +18,19 @@ namespace NHibernateTest
     {
         protected SessionHelper SessionHelper = null;
 
-        protected void Application_BeginRequest(object sender, EventArgs e)
-        {
-            SessionHelper = new SessionHelper();
-            SessionHelper.OpenSession();
-        }
+        //protected void Application_BeginRequest(object sender, EventArgs e)
+        //{
+        //    SessionHelper = new SessionHelper();
+        //    SessionHelper.OpenSession();
+        //}
 
-        protected void Application_EndRequest(object sender, EventArgs e)
-        {
-            SessionHelper = new SessionHelper();
-            SessionHelper.CloseSession();
-        }
+        //protected void Application_EndRequest(object sender, EventArgs e)
+        //{
+        //    SessionHelper = new SessionHelper();
+        //    SessionHelper.CloseSession();
+        //}
+
+
 
         void Application_Start(object sender, EventArgs e)
         {
@@ -34,8 +40,8 @@ namespace NHibernateTest
 
             XmlConfigurator.Configure();
 
-            SessionHelper = new SessionHelper();
-            SessionHelper.OpenSession();
+
+
         }
     }
 }

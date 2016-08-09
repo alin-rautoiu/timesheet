@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NHibernateTest"
+                   namespace="NHibernateTest.Data.Vo">
+
+  <class name="Pontaj">
+    <id name="Guid" type="guid" unsaved-value="00000000-0000-0000-0000-000000000000">
+      <generator class="guid"></generator>
+    </id>
+    <property name="Project" />
+    <property name="Task" />
+    <property name="Comment" />
+    <property name="Sun" />
+    <property name="Mon" />
+    <property name="Tue" />
+    <property name="Wed" />
+    <property name="Thu" />
+    <property name="Fri" />
+    <property name="Sat" />
+    
+  </class>
+
+  <sql-query name="Pontaj">
+    
+    
+
+      
+      <return-scalar column="Project" type="String"/>
+      <return-scalar column="Task" type="String"/>
+    <return-scalar column="Comment" type="String"/>
+      <return-scalar column="Sun" type="Int32"/>
+      <return-scalar column="Mon" type="Int32"/>
+      <return-scalar column="Tue" type="Int32"/>
+      <return-scalar column="Wed" type="Int32"/>
+      <return-scalar column="Thu" type="Int32"/>
+      <return-scalar column="Fri" type="Int32"/>
+      <return-scalar column="Sat" type="Int32"/>
+
+
+    exec Pontaj :nrOfWeek
+
+  </sql-query>
+
+</hibernate-mapping>
