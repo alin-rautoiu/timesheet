@@ -11,16 +11,16 @@ namespace NHibernateTest.Data.Vo
     public class Timesheet :BaseVo<int>
     {
         [Property]
-        public virtual int IdUser { get; set; }
+        public virtual int UserId { get; set; }
         [Property]
         public virtual string Comment { get; set; }
-        [Property]
-        public virtual int TaskId { get; set; }
+
         [Property]
         [ManyToOne(Column = "TaskId")]
         public virtual Task Task { get; set; }
+
         [Set(0, Name = "Daysheets", Inverse = true)]
-        [Key(1, Column = "DaysheetId", ForeignKey = "FK_Daysheet_Timesheet")]
+        [Key(1, Column = "Id", ForeignKey = "FK_Daysheet_Timesheet")]
         [OneToMany(2, ClassType = typeof(Daysheet))]
         public virtual ISet<Daysheet> Daysheets { get; set; }
     }

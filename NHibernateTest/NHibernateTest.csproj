@@ -275,6 +275,7 @@
     <Compile Include="Data\Vo\Project.cs" />
     <Compile Include="Data\Vo\Task.cs" />
     <Compile Include="Data\Vo\Timesheet.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

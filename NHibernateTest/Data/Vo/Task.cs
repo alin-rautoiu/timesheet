@@ -12,14 +12,14 @@ namespace NHibernateTest.Data.Vo
     public class Task :BaseVo<int>
     {
         [Property]
-        public virtual string Nume{ get; set; }
-        [Property]
-        public virtual int ProjectId { get; set; }
+        public virtual string Name{ get; set; }
+
         [Property]
         [ManyToOne(Column = "ProjectId")]
-        public virtual Project Project { get; set; }
+        public virtual Project Project { get; set; }        
+
         [Set(0, Name = "Timesheets", Inverse = true)]
-        [Key(1, Column = "TimesheetId", ForeignKey = "FK_Timesheet_Task")]
+        [Key(1, Column = "Id", ForeignKey = "FK_Timesheet_Task")]
         [OneToMany(2, ClassType = typeof(Task))]
         public virtual ISet<Timesheet> Timesheets { get; set; }
     }

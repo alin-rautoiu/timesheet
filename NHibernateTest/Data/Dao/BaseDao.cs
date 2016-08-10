@@ -75,7 +75,7 @@ namespace NHibernateTest.Data.Dao
         {
             using (TransactionScope transaction = new TransactionScope(TransactionScopeOption.Required))
             {
-                CurrentSession.Update(entity);
+                CurrentSession.Merge(entity);
                 CurrentSession.Flush();
                 transaction.Complete();
             }
